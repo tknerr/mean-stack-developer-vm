@@ -17,4 +17,8 @@ describe 'mean-dev-vm::default' do
     its(:exit_status) { should eq 0 }
   end
 
+  describe command('vim --version') do
+    its(:exit_status) { should eq 0 }
+  end
+
 end
