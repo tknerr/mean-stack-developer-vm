@@ -5,3 +5,7 @@ license 'all_rights'
 description 'Installs/Configures mean-dev-vm'
 long_description 'Installs/Configures mean-dev-vm'
 version '0.1.0'
+
+depends 'apt', '2.8.2'
+depends 'git', '4.3.4'
+depends 'nodejs', '2.4.2'
