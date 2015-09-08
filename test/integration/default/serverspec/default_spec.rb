@@ -16,7 +16,12 @@ describe 'mean-dev-vm::default' do
     expect(command('npm -v').exit_status).to eq 0
   end
 
+  it "installs the mean-cli" do
+    expect(command('mean -v').exit_status).to eq 0
+  end
+
   it "installs vim" do
     expect(command('vim --version').exit_status).to eq 0
   end
+
 end
