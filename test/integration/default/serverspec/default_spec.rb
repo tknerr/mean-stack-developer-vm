@@ -4,21 +4,19 @@ describe 'mean-dev-vm::default' do
   # Serverspec examples can be found at
   # http://serverspec.org/resource_types.html
 
-  describe command('git --version') do
-    its(:stdout) { should match /git version/ }
-    its(:exit_status) { should eq 0 }
+  it "installs git" do
+    expect(command('git --version').exit_status).to eq 0
   end
 
-  describe command('node -v') do
-    its(:exit_status) { should eq 0 }
+  it "installs node" do
+    expect(command('node -v').exit_status).to eq 0
   end
 
-  describe command('npm -v') do
-    its(:exit_status) { should eq 0 }
+  it "installs npm" do
+    expect(command('npm -v').exit_status).to eq 0
   end
 
-  describe command('vim --version') do
-    its(:exit_status) { should eq 0 }
+  it "installs vim" do
+    expect(command('vim --version').exit_status).to eq 0
   end
-
 end
