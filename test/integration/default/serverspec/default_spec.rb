@@ -25,8 +25,8 @@ describe 'mean-dev-vm::default' do
   end
   it "installs mongodb" do
     expect(command('mongo -v').exit_status).to eq 0
-    expect(service('mongod').to be_enabled
-    expect(service('mongod').to be_running
+    expect(service('mongod')).to be_enabled
+    expect(service('mongod')).to be_running
   end
 
 end
