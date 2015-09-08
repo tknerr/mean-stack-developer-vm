@@ -2,3 +2,4 @@
 AllCops:
   Exclude:
     - Rakefile
+    - vendor/bundle/**/*
