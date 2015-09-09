@@ -12,6 +12,8 @@ include_recipe 'nodejs'
 
 include_recipe 'vim'
 
+include_recipe 'mongodb'
+
 # install mean-cli
 nodejs_npm 'mean-cli' do
   version '0.10.14'
